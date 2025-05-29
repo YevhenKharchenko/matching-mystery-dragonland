@@ -1,36 +1,66 @@
 .policy-section {
-  padding-top: 118px;
-  padding-bottom: 78px;
+  padding-top: 116px;
+  padding-bottom: 80px;
 
   @include media(desktop) {
-    padding-top: 136px;
-    padding-bottom: 64px;
+    padding-top: 160px;
+    padding-bottom: 120px;
   }
 }
 
 .policy-title {
+  font-family: 'Afacad', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.5;
+  text-align: center;
+  color: #082526;
+
+  @include media(desktop) {
+    font-size: 48px;
+    line-height: 1.3;
+  }
 }
 
 .policy-subtitle {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #f5f2eb;
+  font-family: 'Afacad', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #082526;
+  margin-bottom: 1em;
+
+  @include media(desktop) {
+    font-weight: 600;
+    font-size: 32px;
+  }
 }
 
 .policy-text {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Afacad', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.5;
-  color: #f5f2eb;
+  line-height: 1.3;
+  color: #082526;
 
   &:not(:last-child) {
     margin-bottom: 1em;
   }
 
   @include media(desktop) {
+    font-size: 24px;
+  }
+}
+
+.policy-date {
+  font-family: 'Afacad', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #082526;
+
+  @include media(desktop) {
+    font-size: 24px;
   }
 }
 
@@ -41,7 +71,6 @@
 }
 
 .support-link {
-  font-weight: 700;
   word-wrap: break-word;
 }
 

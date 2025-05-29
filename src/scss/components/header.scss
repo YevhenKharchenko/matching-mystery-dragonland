@@ -1,42 +1,51 @@
 .header {
-  background: transparent;
-  padding-top: 48px;
-  padding-bottom: 24px;
+  backdrop-filter: blur(10px);
+  background: rgba(142, 191, 255, 0.8);
+  padding-top: 16px;
+  padding-bottom: 16px;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 10;
 
-  &.scrolled {
-    background: #58555d;
-    backdrop-filter: blur(8px);
-  }
-
   @include media(desktop) {
-    padding-top: 32px;
-    padding-bottom: 32px;
   }
-}
-
-.header-menu {
-  background: #78e4fa;
 }
 
 .header-container {
-  padding: 0 42px;
-
-  @include media(desktop) {
-    padding: 0 80px;
-  }
 }
 
 .nav {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
 
   @include media(desktop) {
-    justify-content: center;
+    justify-content: space-between;
+  }
+}
+
+.header-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  @include media(desktop) {
+    gap: 12px;
+  }
+}
+
+.header-span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  color: #264522;
+
+  @include media(desktop) {
+    font-weight: 600;
+    max-width: 179px;
   }
 }
 
@@ -46,32 +55,31 @@
   @include media(desktop) {
     display: flex;
     align-items: center;
-    gap: 48px;
+    gap: 16px;
   }
 }
 
 .nav-list-link {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
   line-height: 1.5;
-  color: #f5f2eb;
+  letter-spacing: -0.03em;
+  color: #264522;
   transition: all 0.3s ease-in-out;
 
   &:hover,
   &.active {
-    color: #ff9735;
   }
 }
 
 .nav-list-link.active {
-  color: #ff9735;
 }
 
 .nav-btn {
   background-color: transparent;
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
 
   @include media(desktop) {
     display: none;
@@ -81,8 +89,8 @@
 .close-btn {
   display: none;
   background-color: transparent;
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
 
   @include media(desktop) {
     display: none;
