@@ -1,0 +1,50 @@
+.policy-section {
+  padding-top: 118px;
+  padding-bottom: 78px;
+
+  @include media(desktop) {
+    padding-top: 136px;
+    padding-bottom: 64px;
+  }
+}
+
+.policy-title {
+}
+
+.policy-subtitle {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #f5f2eb;
+}
+
+.policy-text {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #f5f2eb;
+
+  &:not(:last-child) {
+    margin-bottom: 1em;
+  }
+
+  @include media(desktop) {
+  }
+}
+
+.policy-link {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  word-wrap: break-word;
+}
+
+.support-link {
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.policy-span {
+  font-weight: 700;
+}

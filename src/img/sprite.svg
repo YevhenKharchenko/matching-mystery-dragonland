@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+  <defs>
+    <symbol id="icon-arrow-left" viewBox="0 0 32 32">
+      <path fill="#78e4fa" d="M20.834 8.037 9.64 14.5c-1.43.825-1.43 2.175 0 3l11.195 6.463c1.43.826 2.598.15 2.598-1.5V9.537c0-1.65-1.169-2.326-2.599-1.5z" style="fill:var(--color1, #78e4fa)"/>
+    </symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 32 32">
+      <path fill="#78e4fa" d="M11.166 23.963 22.36 17.5c1.43-.825 1.43-2.175 0-3L11.165 8.037c-1.43-.826-2.598-.15-2.598 1.5v12.926c0 1.65 1.169 2.326 2.599 1.5z" style="fill:var(--color1, #78e4fa)"/>
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 32 32">
+      <path fill="#58555d" d="m8.533 25.333-1.867-1.867 7.467-7.467-7.467-7.467 1.867-1.867L16 14.132l7.467-7.467 1.867 1.867-7.467 7.467 7.467 7.467-1.867 1.867L16 17.866l-7.467 7.467z" style="fill:var(--color2, #58555d)"/>
+    </symbol>
+    <symbol id="icon-ellipse" viewBox="0 0 32 32">
+      <path fill="#78e4fa" d="M32 16c0 8.837-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0s16 7.163 16 16z" opacity=".5" style="fill:var(--color1, #78e4fa)"/>
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 32 32">
+      <path fill="#f5f2eb" d="M4 24v-2h24v2H4zm0-7v-2h24v2H4zm0-7V8h24v2H4z" style="fill:var(--color3, #f5f2eb)"/>
+    </symbol>
+  </defs>
+</svg>

@@ -1,0 +1,96 @@
+.works-section {
+  padding-bottom: 80px;
+
+  @include media(desktop) {
+    padding-bottom: 150px;
+  }
+}
+
+.works-container {
+  padding-left: 0;
+  padding-right: 0;
+
+  @include media(desktop) {
+    padding-left: 80px;
+    padding-right: 80px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+    position: relative;
+  }
+}
+
+.works-bg-img {
+  margin-bottom: 22px;
+
+  @include media(desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.works-content-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include media(desktop) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.works-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  @include media(desktop) {
+    align-items: start;
+    max-height: 272px;
+    flex-wrap: wrap;
+  }
+}
+
+.works-list-item {
+  border-radius: 12px;
+  padding: 18px 14.5px;
+  max-width: 305px;
+  height: 126px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #828183;
+}
+
+.works-item-text {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  color: #78e4fa;
+}
+
+.works-big-steps-img {
+  display: none;
+
+  @include media(desktop) {
+    display: block;
+    position: absolute;
+    bottom: 61px;
+    left: 80px;
+  }
+}
+
+.works-small-steps-img {
+  display: none;
+
+  @include media(desktop) {
+    display: block;
+    position: absolute;
+    bottom: 86px;
+    left: 347px;
+  }
+}
