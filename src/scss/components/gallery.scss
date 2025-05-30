@@ -52,6 +52,11 @@
     gap: 24px;
     overflow-x: auto;
     padding-bottom: 32px;
+    cursor: grab;
+
+    &.grabbing {
+      cursor: grabbing;
+    }
 
     // scrollbar-color: #538afb rgba(38, 108, 255, 0.3);
     // scrollbar-width: thin;
@@ -79,10 +84,15 @@
 
 .gallery-slide {
   max-width: 343px;
+  user-select: none;
 
   @include media(desktop) {
     min-width: 526px;
   }
+}
+
+.gallery-slide img {
+  pointer-events: none;
 }
 
 .gallery-dot {

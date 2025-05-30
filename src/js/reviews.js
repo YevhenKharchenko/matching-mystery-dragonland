@@ -46,3 +46,34 @@ reviewsDots.forEach((dot, index) => {
     reviewsSwiper.slideTo(index);
   });
 });
+
+const reviewsListDesk = document.querySelector('.reviews-list-desk');
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+reviewsListDesk.addEventListener('mousedown', e => {
+  isDown = true;
+  reviewsListDesk.classList.add('grabbing');
+  startX = e.pageX - reviewsListDesk.offsetLeft;
+  scrollLeft = reviewsListDesk.scrollLeft;
+});
+
+reviewsListDesk.addEventListener('mouseleave', () => {
+  isDown = false;
+  reviewsListDesk.classList.remove('grabbing');
+});
+
+reviewsListDesk.addEventListener('mouseup', () => {
+  isDown = false;
+  reviewsListDesk.classList.remove('grabbing');
+});
+
+reviewsListDesk.addEventListener('mousemove', e => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - reviewsListDesk.offsetLeft;
+  const walk = (x - startX) * 1.5;
+  reviewsListDesk.scrollLeft = scrollLeft - walk;
+});

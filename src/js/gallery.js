@@ -46,3 +46,34 @@ galleryDots.forEach((dot, index) => {
     gallerySwiper.slideTo(index);
   });
 });
+
+const galleryListDesk = document.querySelector('.gallery-list-desk');
+
+let isGalleryDown = false;
+let startGalleryX;
+let galleryScrollLeft;
+
+galleryListDesk.addEventListener('mousedown', e => {
+  isGalleryDown = true;
+  galleryListDesk.classList.add('grabbing');
+  startGalleryX = e.pageX - galleryListDesk.offsetLeft;
+  galleryScrollLeft = galleryListDesk.scrollLeft;
+});
+
+galleryListDesk.addEventListener('mouseleave', () => {
+  isGalleryDown = false;
+  galleryListDesk.classList.remove('grabbing');
+});
+
+galleryListDesk.addEventListener('mouseup', () => {
+  isGalleryDown = false;
+  galleryListDesk.classList.remove('grabbing');
+});
+
+galleryListDesk.addEventListener('mousemove', e => {
+  if (!isGalleryDown) return;
+  e.preventDefault();
+  const x = e.pageX - galleryListDesk.offsetLeft;
+  const walk = (x - startGalleryX) * 1.5;
+  galleryListDesk.scrollLeft = galleryScrollLeft - walk;
+});
