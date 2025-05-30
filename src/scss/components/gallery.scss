@@ -82,22 +82,3 @@
     }
   }
 }
-
-.dots {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.dot {
-  width: 16px;
-  height: 16px;
-  transition: transform 0.3s ease-in-out;
-  border-radius: 100%;
-  background: rgba(120, 228, 250, 0.5);
-  cursor: pointer;
-}
-
-.dot.active {
-  background: #78e4fa;
-}

@@ -1,19 +1,39 @@
 .hero-section {
-  padding-top: 100px;
-  padding-bottom: 536px;
-  background-image: url(../img/hero/hero-cat-mob.png),
-    url(../img/hero/hero-bg-mob.jpg);
-  background-repeat: no-repeat, no-repeat;
-  background-position: bottom 80px center, top center;
-  background-size: auto, auto;
+  padding-top: 98px;
+  padding-bottom: 384px;
+  background-image: url(../img/hero/hero-bg-mob.jpg);
+  background-repeat: no-repeat;
+  background-position: top 76px center;
+  background-size: auto;
 
   @include media(desktop) {
-    padding-top: 126px;
-    padding-bottom: 591px;
-    background-image: url(../img/hero/hero-steps-desk.png),
-      url(../img/hero/hero-bg-desk.jpg);
-    background-position: bottom 150px right 81px, top center;
+    padding-top: 192px;
+    padding-bottom: 418px;
+    background-image: url(../img/hero/hero-bg-desk.jpg);
+    background-position: top 0px center;
     max-width: 1440px;
     margin: 0 auto;
+  }
+}
+
+.hero-container {
+  padding: 0;
+}
+
+.hero-title {
+  padding: 16px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.5);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.4;
+  color: #264522;
+
+  @include media(desktop) {
+    padding: 16px 16px 16px 72px;
+    max-width: 708px;
+    font-size: 56px;
+    line-height: 1.5;
   }
 }

@@ -1,11 +1,11 @@
 import Swiper from 'swiper';
 import 'swiper/css/bundle';
 
-const featuresDots = document.querySelectorAll('.features-dot');
+const advantagesDots = document.querySelectorAll('.advantages-dot');
 
-let featuresSwiper;
+let advantagesSwiper;
 
-featuresSwiper = new Swiper('.features-swiper-container', {
+advantagesSwiper = new Swiper('.advantages-swiper-container', {
   direction: 'horizontal',
   grabCursor: true,
   slidesPerView: 1,
@@ -28,23 +28,23 @@ featuresSwiper = new Swiper('.features-swiper-container', {
   on: {
     init: () => {
       document
-        .querySelector('.features-swiper-container')
+        .querySelector('.advantages-swiper-container')
         .classList.add('show');
     },
     slideChange: function () {
-      updateFeaturesDots(this.realIndex);
+      updateAdvantagesDots(this.realIndex);
     },
   },
 });
 
-function updateFeaturesDots(index) {
-  featuresDots.forEach((dot, i) => {
+function updateAdvantagesDots(index) {
+  advantagesDots.forEach((dot, i) => {
     dot.classList.toggle('active', i === index);
   });
 }
 
-featuresDots.forEach((dot, index) => {
+advantagesDots.forEach((dot, index) => {
   dot.addEventListener('click', () => {
-    featuresSwiper.slideTo(index);
+    advantagesSwiper.slideTo(index);
   });
 });

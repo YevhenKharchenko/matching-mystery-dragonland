@@ -1,4 +1,4 @@
-.features-section {
+.advantages-section {
   padding-bottom: 80px;
 
   @include media(desktop) {
@@ -6,7 +6,7 @@
   }
 }
 
-.features-section-wrapper {
+.advantages-section-wrapper {
   max-width: 375px;
   margin-left: auto;
   margin-right: auto;
@@ -17,7 +17,7 @@
   }
 }
 
-.features-container {
+.advantages-container {
   padding-left: 0;
   padding-right: 0;
 
@@ -27,7 +27,7 @@
   }
 }
 
-.features-swiper-container {
+.advantages-swiper-container {
   max-width: 343px;
   margin-left: auto;
   margin-right: auto;
@@ -38,11 +38,11 @@
   }
 }
 
-.features-swiper-container.show {
+.advantages-swiper-container.show {
   visibility: visible;
 }
 
-.features-slide {
+.advantages-slide {
   padding: 0;
   max-width: 343px;
   display: flex !important;
@@ -55,35 +55,45 @@
   }
 }
 
-.features-item-wrapper {
-  background: #d0e2f5;
-  border: 3px solid #eac211;
+.advantages-item-wrapper {
+  border: 0.1px solid #cea032;
   border-radius: 16px;
   padding: 16px;
-  min-height: 127px;
+  min-height: 106px;
 
   @include media(desktop) {
     border-radius: 24px;
+    min-height: 164px;
     padding: 24px;
-    min-height: 216px;
   }
 }
 
-.features-subtitle {
+.advantages-item-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 8px;
+
+  @include media(desktop) {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+}
+
+.advantages-subtitle {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.03em;
   color: #264522;
-  margin-bottom: 8px;
 
   @include media(desktop) {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 
-.features-text {
+.advantages-text {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -92,7 +102,7 @@
   color: #264522;
 
   @include media(desktop) {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -108,7 +118,7 @@
   }
 }
 
-.features-dot {
+.advantages-dot {
   width: 24px;
   height: 24px;
   border-radius: 100%;
@@ -117,6 +127,6 @@
   cursor: pointer;
 }
 
-.features-dot.active {
+.advantages-dot.active {
   background-color: #b85efa;
 }
