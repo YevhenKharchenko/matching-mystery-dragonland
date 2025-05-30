@@ -5,6 +5,9 @@
   background-repeat: no-repeat;
   background-position: top 76px center;
   background-size: auto;
+  max-width: 375px;
+  margin: 0 auto;
+  position: relative;
 
   @include media(desktop) {
     padding-top: 192px;
@@ -12,7 +15,6 @@
     background-image: url(../img/hero/hero-bg-desk.jpg);
     background-position: top 0px center;
     max-width: 1440px;
-    margin: 0 auto;
   }
 }
 
@@ -37,3 +39,15 @@
     line-height: 1.5;
   }
 }
+
+// .hero-girl-img {
+//   position: absolute;
+//   bottom: 0;
+//   right: 0;
+//   width: 225px;
+//   height: 521px;
+
+//   @include media(desktop) {
+//     display: none;
+//   }
+// }

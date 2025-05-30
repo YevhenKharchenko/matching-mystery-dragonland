@@ -1,9 +1,25 @@
+.description-wrapper {
+  background-image: url(../img/common/bg-green-line-mob.png);
+  background-repeat: no-repeat;
+  background-position: top 664px center;
+  background-size: auto;
+
+  @include media(desktop) {
+    background-image: url(../img/common/bg-green-line-desk.png);
+    background-position: top 393px center;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
 .description-section {
   padding-top: 82px;
   padding-bottom: 80px;
+  scroll-margin-top: 0px;
 
   @include media(desktop) {
     padding-bottom: 96px;
+    scroll-margin-top: 30px;
   }
 }
 

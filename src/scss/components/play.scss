@@ -1,7 +1,25 @@
-.play-section {
-  padding-bottom: 80px;
+.play-wrapper {
+  background-image: url(../img/common/bg-purple-line-mob.png);
+  background-repeat: no-repeat;
+  background-position: bottom 223px center;
+  background-size: auto;
 
   @include media(desktop) {
+    background-image: url(../img/common/bg-purple-line-desk.png);
+    background-position: bottom 128px center;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.play-section {
+  padding-bottom: 80px;
+  max-width: 375px;
+  margin: 0 auto;
+  position: relative;
+
+  @include media(desktop) {
+    max-width: 1440px;
     padding-bottom: 96px;
   }
 }
@@ -88,5 +106,26 @@
 
   @include media(desktop) {
     font-size: 16px;
+  }
+}
+
+.play-dragon-img {
+  position: absolute;
+  bottom: 5px;
+  right: 3px;
+
+  @include media(desktop) {
+    bottom: 109px;
+    right: 20px;
+  }
+}
+
+.play-photographer-img {
+  position: absolute;
+  top: -150px;
+  left: 0;
+
+  @include media(desktop) {
+    top: 57px;
   }
 }
