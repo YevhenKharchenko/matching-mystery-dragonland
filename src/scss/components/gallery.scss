@@ -1,8 +1,8 @@
 .gallery-section {
-  padding-bottom: 78px;
+  padding-bottom: 80px;
 
   @include media(desktop) {
-    padding-bottom: 150px;
+    padding-bottom: 96px;
   }
 }
 
@@ -20,15 +20,21 @@
 .gallery-container {
   padding-left: 0;
   padding-right: 0;
+
+  @include media(desktop) {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
 }
 
 .gallery-swiper-container {
-  max-width: 305px;
+  max-width: 343px;
   margin-left: auto;
   margin-right: auto;
   visibility: hidden;
 
   @include media(desktop) {
+    display: none;
     max-width: 1440px;
   }
 }
@@ -37,48 +43,57 @@
   visibility: visible;
 }
 
-.gallery-slide {
-  padding: 0;
-  max-width: 305px;
-}
-
-.controls {
+.gallery-list-desk {
   display: none;
 
   @include media(desktop) {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-top: 28px;
-    gap: 12px;
+    gap: 24px;
+    overflow-x: auto;
+    padding-bottom: 32px;
+
+    // scrollbar-color: #538afb rgba(38, 108, 255, 0.3);
+    // scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 570px;
+      height: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 16px;
+      background: rgba(38, 108, 255, 0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 16px;
+      background: #538afb;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: darken(#538afb, 10%);
+    }
   }
 }
 
-.arrow-btn {
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  transition: transform 0.3s ease-in-out;
-
-  &:active {
-    transform: scale(0.9);
-  }
+.gallery-slide {
+  max-width: 343px;
 
   @include media(desktop) {
-    &:hover {
-      transform: scale(1.1);
-    }
+    min-width: 526px;
   }
+}
 
-  &[disabled] {
-    opacity: 0.5;
-    cursor: not-allowed;
+.gallery-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-color: rgba(184, 94, 250, 0.2);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
 
-    &:hover {
-      transform: none;
-    }
-  }
+.gallery-dot.active {
+  background-color: #b85efa;
 }

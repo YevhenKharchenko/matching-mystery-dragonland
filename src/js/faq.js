@@ -1,11 +1,11 @@
 import Swiper from 'swiper';
 import 'swiper/css/bundle';
 
-const galleryDots = document.querySelectorAll('.gallery-dot');
+const faqDots = document.querySelectorAll('.faq-dot');
 
-let gallerySwiper;
+let faqSwiper;
 
-gallerySwiper = new Swiper('.gallery-swiper-container', {
+faqSwiper = new Swiper('.faq-swiper-container', {
   direction: 'horizontal',
   grabCursor: true,
   slidesPerView: 1,
@@ -20,29 +20,29 @@ gallerySwiper = new Swiper('.gallery-swiper-container', {
   },
   breakpoints: {
     1440: {
-      spaceBetween: 24,
+      spaceBetween: 0,
       initialSlide: 0,
-      slidesPerView: 4,
+      slidesPerView: 3,
     },
   },
   on: {
     init: () => {
-      document.querySelector('.gallery-swiper-container').classList.add('show');
+      document.querySelector('.faq-swiper-container').classList.add('show');
     },
     slideChange: function () {
-      updateGalleryDots(this.realIndex);
+      updateFaqDots(this.realIndex);
     },
   },
 });
 
-function updateGalleryDots(index) {
-  galleryDots.forEach((dot, i) => {
+function updateFaqDots(index) {
+  faqDots.forEach((dot, i) => {
     dot.classList.toggle('active', i === index);
   });
 }
 
-galleryDots.forEach((dot, index) => {
+faqDots.forEach((dot, index) => {
   dot.addEventListener('click', () => {
-    gallerySwiper.slideTo(index);
+    faqSwiper.slideTo(index);
   });
 });

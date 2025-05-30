@@ -1,0 +1,92 @@
+.contacts-section {
+  padding-bottom: 80px;
+
+  @include media(desktop) {
+    padding-bottom: 120px;
+  }
+}
+
+.contacts-container {
+  @include media(desktop) {
+  }
+}
+
+.contacts-address {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+
+  @include media(desktop) {
+    margin-bottom: 24px;
+  }
+}
+
+.contacts-email-span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  color: #264522;
+
+  @include media(desktop) {
+    font-size: 24px;
+  }
+}
+
+.contacts-email-link {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  color: #264522;
+  word-break: break-all;
+
+  @include media(desktop) {
+    font-size: 24px;
+  }
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include media(desktop) {
+    gap: 24px;
+  }
+}
+
+.contacts-list-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contacts-icon {
+  @include media(desktop) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.contacts-link {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  color: #264522;
+  word-break: break-all;
+
+  @include media(desktop) {
+    font-size: 24px;
+  }
+}
+
+.contacts-fb-link {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}

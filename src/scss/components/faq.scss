@@ -1,4 +1,4 @@
-.reviews-section {
+.faq-section {
   padding-bottom: 80px;
 
   @include media(desktop) {
@@ -6,7 +6,7 @@
   }
 }
 
-.reviews-section-wrapper {
+.faq-section-wrapper {
   max-width: 375px;
   margin-left: auto;
   margin-right: auto;
@@ -17,7 +17,7 @@
   }
 }
 
-.reviews-container {
+.faq-container {
   padding-left: 0;
   padding-right: 0;
 
@@ -27,86 +27,52 @@
   }
 }
 
-.reviews-swiper-container {
+.faq-swiper-container {
   max-width: 343px;
   margin-left: auto;
   margin-right: auto;
   visibility: hidden;
 
   @include media(desktop) {
-    display: none;
     max-width: 1440px;
   }
 }
 
-.reviews-swiper-container.show {
+.faq-swiper-container.show {
   visibility: visible;
 }
 
-.reviews-list-desk {
-  display: none;
-
+.faq-swiper-wrapper {
   @include media(desktop) {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
-    overflow-x: auto;
-    padding-bottom: 32px;
-
-    // scrollbar-color: #538afb rgba(38, 108, 255, 0.3);
-    // scrollbar-width: thin;
-
-    &::-webkit-scrollbar {
-      width: 570px;
-      height: 10px;
-    }
-
-    &::-webkit-scrollbar-track {
-      border-radius: 16px;
-      background: rgba(38, 108, 255, 0.3);
-    }
-
-    &::-webkit-scrollbar-thumb {
-      border-radius: 16px;
-      background: #538afb;
-    }
-
-    &::-webkit-scrollbar-thumb:hover {
-      background: darken(#538afb, 10%);
-    }
   }
 }
 
-.reviews-slide {
+.faq-slide {
+  background: #e6f5e3;
+  border: 4px solid #e9c10f;
+  border-radius: 16px;
   padding: 16px;
   max-width: 343px;
-  border-radius: 16px;
-  background: #ecd4ff;
-  min-height: 106px !important;
+  min-height: 157px !important;
+  display: flex !important;
+  flex-direction: column;
 
   @include media(desktop) {
+    max-width: 416px;
     border-radius: 24px;
     padding: 24px;
-    min-width: 526px;
-    min-height: 154px;
+    min-height: 208px !important;
   }
 }
 
-.reviews-name-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 8px;
-
-  @include media(desktop) {
-    margin-bottom: 16px;
-  }
-}
-
-.reviews-name {
+.faq-subtitle {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   letter-spacing: -0.03em;
   color: #264522;
@@ -116,20 +82,33 @@
   }
 }
 
-.reviews-text {
+.faq-text {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: -0.03em;
   color: #264522;
+  margin-top: auto;
 
   @include media(desktop) {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
-.reviews-dot {
+.dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.faq-dot {
   width: 24px;
   height: 24px;
   border-radius: 100%;
@@ -138,6 +117,6 @@
   cursor: pointer;
 }
 
-.reviews-dot.active {
+.faq-dot.active {
   background-color: #b85efa;
 }
